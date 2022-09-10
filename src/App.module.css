@@ -1,0 +1,113 @@
+.wrapper {
+  max-width: 46rem;
+  margin: 0 auto;
+  margin-top: -1.6875rem;
+}
+
+.newTaskBox {
+  display: flex;
+  height: 3.375rem;
+  margin-bottom: 4rem;
+}
+
+.newTaskBox input {
+  flex-grow: 1;
+  border: 1px solid var(--gray-700);
+  background: var(--gray-500);
+  border-radius: 8px;
+  color: var(--gray-300);
+  line-height: 1.4;
+  padding: 1rem;
+}
+
+.newTaskBox button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gray-100);
+  background: var(--blue-700);
+  border: 0;
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.newTaskBox button:hover {
+  background: var(--blue-500);
+}
+
+.newTaskBox button svg {
+  margin-left: 0.5rem;
+}
+
+.tasksInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksInfo div {
+  display: flex;
+  flex-direction: row;
+}
+
+.createdTasks, .doneTasks {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.createdTasks span, .doneTasks span {
+  font-size: 0.875rem;
+}
+
+.createdTasks span {
+  color: var(--blue-500);
+}
+
+.doneTasks span {
+  color: var(--purple-500);
+}
+
+.createdTasks div, .doneTasks div {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+
+  color: var(--gray-200);
+  background: var(--gray-400);
+  border-radius: 999px;
+
+  padding: 0.125rem 0.5rem;
+}
+
+.tasks {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.tasksEmpty {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tasksEmpty svg {
+  height: 3.5rem;
+}
+
+.tasksEmpty p {
+  line-height: 1.4;
+  color: var(--gray-300);
+}
+
+.tasksEmpty p:first-of-type {
+  margin-top: 1rem;
+  font-weight: bold;
+}

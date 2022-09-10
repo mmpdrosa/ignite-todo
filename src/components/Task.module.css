@@ -1,0 +1,124 @@
+.task {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+
+  margin-bottom: 0.75rem;
+}
+
+.checkboxContainer {
+  display: block;
+  position: relative;
+  padding-left: 1rem;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  
+  border-radius: 50%;
+
+  border: 2px solid var(--blue-500);
+}
+
+/* On mouse-over */
+.checkboxContainer:hover input ~ .checkmark {
+  border-color: var(--blue-700);
+}
+
+/* When the checkbox is checked */
+.checkboxContainer input:checked ~ .checkmark {
+  background: var(--purple-700);
+  border: 2px solid var(--purple-700);
+}
+
+/* When the checkbox is checked, on mouse-over */
+.checkboxContainer:hover input:checked ~ .checkmark {
+  background: var(--purple-500);
+  border: 2px solid var(--purple-500);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxContainer .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.task p {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.taskTitle {
+  text-decoration: none;
+  color: var(--gray-100);
+}
+
+.taskTitleChecked {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.task button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+
+  line-height: 0;
+  border-radius: 4px;
+  padding: 0.4rem;
+  
+  transition: color, background-color 0.2s;
+}
+
+.task button:hover {
+  color: var(--danger-500);
+  background: var(--gray-400);
+}
